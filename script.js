@@ -1,25 +1,25 @@
 var articles;
 
 function detectArticles(callback) {
-	log("detecting articles...")
+	LOG("detecting articles...")
 	articles = document.getElementsByTagName("article");
 	if (articles.isEmpty) { return; }
 	callback();
 }
 
-// function tokenizeArticles() {
+function tokenizeArticles() {
 
-// }
+}
 
 function init() {
 	detectArticles(function() {
-	// tokenizeArticles(function() {
-	console.log(articles);
-	// })
+	tokenizeArticles(function() {
+	LOG(articles);
+	})
 	});
 }
 
 window.onload = function() {
-	log("extension initializing...")
+	LOG("extension initializing...")
 	init();
 }

@@ -3,6 +3,6 @@ Array.prototype.isEmpty = function() {
 	else                  { return false; }
 }
 
-function log(str) {
+function LOG(str) {
 	console.log(str);
 }
