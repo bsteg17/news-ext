@@ -2,7 +2,7 @@ var articles;
 
 function detectArticles(callback) {
 	articles = document.getElementsByTagName("article");
-	if (articles.length == 0) { return; }
+	if (articles.isEmpty) { return; }
 	callback();
 }
 
@@ -13,5 +13,6 @@ function init() {
 }
 
 window.onload = function() {
+	console.log("extension initializing...")
 	init();
 }
