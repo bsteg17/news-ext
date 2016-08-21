@@ -1,7 +1,17 @@
-// chrome.browserAction.onClicked.addListener(function(tab) {
-//   chrome.tabs.executeScript({
-//     code: "console.log('hi');"
-//   });
-// });
+var articles;
 
-console.log("hi");
+function detectArticles(callback) {
+	articles = document.getElementsByTagName("article");
+	if (articles.length == 0) { return; }
+	callback();
+}
+
+function init() {
+	detectArticles(function() {
+	console.log(articles);
+	});
+}
+
+window.onload = function() {
+	init();
+}
