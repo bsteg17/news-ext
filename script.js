@@ -21,7 +21,7 @@ function tokenizeArticleText() {
 	LOG("tokenizing articles...")
 	articles.forEach(function(article) {
 		LOG(article.text)
-		article.sentences = article.text.splitButKeepSeperators(/[.!?"] /);
+		article.sentences = article.text.tokenizeSentences();
 		LOG(article.sentences);
 	});
 }
